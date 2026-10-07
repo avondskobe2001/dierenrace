@@ -401,34 +401,34 @@ const NAMES  = ["Mehmet","Kobe","Steven","Senne","Denny","Zias"];
 const COLORS = ["#ff5c6c","#ffcc33","#4fb3ff","#3ddc84","#c77dff","#ff9a3c"];
 
 const COMMON_EVENTS = [
-  {t:"{n} struikelt over een steentje!", m:0.15, d:1.2, neg:1},
-  {t:"{n} krijgt een energieboost! ⚡", m:1.7, d:1.8},
-  {t:"{n} zwaait naar het publiek.", m:0.4, d:1.5, neg:1},
-  {t:"{n} vindt een extra versnelling!", m:1.55, d:2.2},
+  {t:"¡{n} tropieza con una piedrita!", m:0.15, d:1.2, neg:1},
+  {t:"¡{n} recibe un chute de energía! ⚡", m:1.7, d:1.8},
+  {t:"{n} saluda al público.", m:0.4, d:1.5, neg:1},
+  {t:"¡{n} encuentra una marcha extra!", m:1.55, d:2.2},
 ];
 const PLURAL = {schapen:"schapen",kippen:"kippen",slakken:"slakken",varkens:"varkens",eenden:"eenden",schildpadden:"schildpadden",koeien:"koeien"};
 const RACES = {
   schapen:{name:"Schapenrace", e:"🐑", flip:true, ground:"#4f8f3a", lane:["#5c9e45","#559640"], deco:["🌼","🌿","🌸"], base:4.6,
-    events:[{t:"{n} stopt om wat gras te eten. 🌱", m:0.05, d:2.4, neg:1},{t:"{n} volgt per ongeluk de verkeerde kudde!", m:0.3, d:2, neg:1},
-            {t:"{n} maakt een bokkensprong! 🦘", m:1.9, d:1.2},{t:"{n} wordt opgejaagd door de herdershond!", m:1.8, d:1.8}]},
+    events:[{t:"{n} se para a comer hierba. 🌱", m:0.05, d:2.4, neg:1},{t:"¡{n} se va con el rebaño equivocado!", m:0.3, d:2, neg:1},
+            {t:"¡{n} pega un brinco! 🦘", m:1.9, d:1.2},{t:"¡El perro pastor persigue a {n}!", m:1.8, d:1.8}]},
   kippen:{name:"Kippenrace", e:"🐓", flip:true, ground:"#b98a4f", lane:["#c99a5c","#bf9052"], deco:["🌽","🌾","🥚"], base:4.8,
-    events:[{t:"{n} fladdert over een hek! 🪶", m:1.9, d:1.2},{t:"{n} legt plots een ei! 🥚", m:0, d:2, neg:1},
-            {t:"{n} pikt naar een worm.", m:0.2, d:1.5, neg:1},{t:"{n} rent kakelend als een gek vooruit!", m:1.7, d:1.6}]},
+    events:[{t:"¡{n} revolotea por encima de la valla! 🪶", m:1.9, d:1.2},{t:"¡{n} pone un huevo de repente! 🥚", m:0, d:2, neg:1},
+            {t:"{n} picotea un gusano.", m:0.2, d:1.5, neg:1},{t:"¡{n} corre cacareando como loco!", m:1.7, d:1.6}]},
   slakken:{name:"Slakkenrace", e:"🐌", flip:true, ground:"#3e6b35", lane:["#4a7a3f","#437239"], deco:["🍄","🍃","🌱"], base:4.2,
-    events:[{t:"{n} kruipt in zijn huisje. 🐚", m:0, d:3, neg:1},{t:"{n} glijdt over een vers slijmspoor! 💨", m:1.9, d:2},
-            {t:"{n} wordt bijna opgepeuzeld door een merel!", m:1.6, d:1.6},{t:"{n} blijft plakken aan een blaadje.", m:0.2, d:2, neg:1}]},
+    events:[{t:"{n} se mete en su concha. 🐚", m:0, d:3, neg:1},{t:"¡{n} se desliza por un rastro de baba! 💨", m:1.9, d:2},
+            {t:"¡Un mirlo casi se come a {n}!", m:1.6, d:1.6},{t:"{n} se queda pegado a una hoja.", m:0.2, d:2, neg:1}]},
   varkens:{name:"Varkensrace", e:"🐖", flip:true, ground:"#6b4a2e", lane:["#7a5535","#704d30"], deco:["🟤","🍎","🌰"], base:4.7,
-    events:[{t:"{n} rolt in de modder. 🐷", m:0, d:2.4, neg:1},{t:"{n} ruikt een truffel en snuffelt rond.", m:0.2, d:2, neg:1},
-            {t:"{n} glijdt door de modder vooruit! 💦", m:1.9, d:1.3},{t:"{n} ziet een emmer appels aan de finish!", m:1.7, d:1.8}]},
+    events:[{t:"{n} se revuelca en el barro. 🐷", m:0, d:2.4, neg:1},{t:"{n} huele una trufa y se pone a olfatear.", m:0.2, d:2, neg:1},
+            {t:"¡{n} resbala por el barro a toda velocidad! 💦", m:1.9, d:1.3},{t:"¡{n} ve un cubo de manzanas en la meta!", m:1.7, d:1.8}]},
   eenden:{name:"Eendenrace", e:"🦆", flip:true, ground:"#2c6ea3", lane:["#3a83bf","#3479b3"], deco:["💧","🪷","🫧"], base:4.6,
-    events:[{t:"{n} duikt even onder water.", m:0.3, d:2, neg:1},{t:"{n} krijgt rugwind! 🌬️", m:1.7, d:2},
-            {t:"{n} kwaakt naar de fans.", m:0.4, d:1.5, neg:1},{t:"{n} spat vliegend over het water!", m:1.9, d:1.2}]},
+    events:[{t:"{n} se sumerge un momento.", m:0.3, d:2, neg:1},{t:"¡{n} tiene viento a favor! 🌬️", m:1.7, d:2},
+            {t:"{n} le grazna a los aficionados.", m:0.4, d:1.5, neg:1},{t:"¡{n} vuela salpicando sobre el agua!", m:1.9, d:1.2}]},
   schildpadden:{name:"Schildpaddenrace", e:"🐢", flip:true, ground:"#c9b06b", lane:["#d6be78","#ccb36e"], deco:["🌵","🐚","🪨"], base:4.2,
-    events:[{t:"{n} valt in slaap. 💤", m:0, d:3, neg:1},{t:"{n} roept 'Cowabunga!' en gaat ervandoor!", m:1.9, d:1.5},
-            {t:"{n} ligt op zijn rug en spartelt...", m:0, d:2.2, neg:1},{t:"{n} glijdt van een duintje naar beneden!", m:1.8, d:1.4}]},
+    events:[{t:"{n} se queda dormido. 💤", m:0, d:3, neg:1},{t:"¡{n} grita Cowabunga y sale disparado!", m:1.9, d:1.5},
+            {t:"{n} está boca arriba pataleando...", m:0, d:2.2, neg:1},{t:"¡{n} se tira duna abajo!", m:1.8, d:1.4}]},
   koeien:{name:"Koeienrace", e:"🐄", flip:true, ground:"#5f9a3f", lane:["#6aa648","#629d42"], deco:["🌼","🌻","🌿"], base:4.5,
-    events:[{t:"{n} gaat even liggen. 🐮", m:0, d:2.4, neg:1},{t:"{n} ziet een rode lap en stormt vooruit!", m:2.0, d:1.4},
-            {t:"{n} loeit luid naar het publiek.", m:0.4, d:1.5, neg:1},{t:"{n} hoort de melkboer en versnelt!", m:1.7, d:1.8}]},
+    events:[{t:"{n} se tumba un rato. 🐮", m:0, d:2.4, neg:1},{t:"¡{n} ve un trapo rojo y embiste hacia delante!", m:2.0, d:1.4},
+            {t:"{n} muge fuerte al público.", m:0.4, d:1.5, neg:1},{t:"¡{n} oye al lechero y acelera!", m:1.7, d:1.8}]},
 };
 const RACE_KEYS = Object.keys(RACES);
 
@@ -717,7 +717,7 @@ const Speech = {
       const L = v => String(v.lang||"").replace("_","-").toLowerCase();
       const q = v => /natural|online|neural/i.test(v.name||"") ? 0 : 1;   // betere (online) stemmen eerst
       const by = f => vs.filter(f).sort((a,b)=>q(a)-q(b));
-      const be = by(v=>L(v)==="nl-be"), nl = by(v=>L(v)==="nl-nl"), any = by(v=>L(v).startsWith("nl"));
+      const be = by(v=>L(v)==="es-es"), nl = by(v=>L(v)==="es-mx" || L(v)==="es-us"), any = by(v=>L(v).startsWith("es"));
       const list = be.length ? be : nl.length ? nl : any;
       this.karl = list[0] || null;
       this.jose = list[1] || list[0] || null;
@@ -734,7 +734,7 @@ const Speech = {
     const v = line.who === "karl" ? this.karl : this.jose;
     const text = line.text.replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}\u{200D}]/gu, "").replace(/\s+/g," ").trim();
     const u = new window.SpeechSynthesisUtterance(text);
-    if(v){ u.voice = v; u.lang = v.lang; } else u.lang = "nl-BE";
+    if(v){ u.voice = v; u.lang = v.lang; } else u.lang = "es-ES";
     if(line.who === "karl"){ u.pitch = 1.15; u.rate = 1.12*rateBoost; } else { u.pitch = 0.78; u.rate = 0.96*rateBoost; }
     u.volume = 1;
     u.onend = onDone; u.onerror = onDone;
@@ -827,51 +827,32 @@ function logLine(who, text){
 
 /* ---------------- Teksten ---------------- */
 const TXT = {
-  intro: [
-    "Goeiendag en welkom bij Dierenrace TV! Vandaag de {race}, één ronde rond het ovaal!",
-    "Welkom terug op Dierenrace TV! Zes {dieren} aan de start. Wat gaat dit geven?",
-    "Daar zijn we weer, beste kijkers! De {race} staat op het punt te beginnen!",
-  ],
-  introJose: [
-    "{fav} staat bovenaan bij de bookmakers aan {odd}. Maar ge weet het nooit met {dieren}, hé Karl.",
-    "Ik zeg {fav}. Die heeft de benen. Maar {out} aan {oodd}, daar zou ik ook eens naar kijken.",
-    "Allez, ik heb er goesting in. {fav} is de favoriet, maar ik heb al straffere dingen gezien.",
-  ],
-  start: ["En ze zijn vertrokken! De {race} is begonnen!", "Daar gaan ze! Zes {dieren}, één ronde, één winnaar!", "Het startschot! En weg zijn ze!"],
-  lead: ["{n} neemt de leiding!", "{n} schuift naar de kop!", "En nu ligt {n} op kop!", "{n} gaat erover! Wat een race!"],
-  leadLate: ["{n} pakt de leiding in de slotfase!", "{n} komt nog op kop! Ongelooflijk!", "{n} gaat er nog voorbij!"],
-  half: ["Halverwege. {n} loopt voorop, maar {m} zit in zijn wiel. Da gaat nog spannend worden.",
-         "Halfweg de ronde. {n} doet het werk, {m} kijkt de kat uit de boom. Slim, hé."],
-  bend: ["Ze gaan de laatste bocht in! {n} voorop!", "De laatste bocht! {n} leidt, {m} komt eraan!"],
-  final: ["De laatste meters! Kan iemand {n} nog pakken?", "Daar is de streep! {n}, {m}, wie wordt het?"],
-  win: ["{n} wint de {race}!", "En de winnaar is {n}! Fantastisch!", "{n} wint! Wat een prestatie!"],
-  photo: ["Fotofinish! {n} wint met een neuslengte voor {m}!"],
-  podium: ["{m} wordt tweede, {k} pakt brons."],
-  jose: [
-    "Ge moet da zien, {n} zit er helemaal door.",
-    "Da's ne coureur, zenne, die {n}.",
-    "Ik zeg het al heel de dag: {n} heeft de benen vandaag.",
-    "Kijk naar die {n}. Soepel, ontspannen. Schoon om te zien.",
-    "{n} zit in de wielen en wacht zijn moment af. Slim, hé.",
-    "Da's nu echt koers, Karl. Hiervoor doen we het.",
-    "Amai, {n}, da's geen wandeling in het park.",
-    "Als ge zo begint, {n}, dan moet ge da wel volhouden, hé.",
-  ],
-  joseBack: [
-    "{n} loopt hier precies met de handrem op.",
-    "Allez {n}, nie opgeven, jong!",
-    "{n} is ergens anders met zijn gedachten. Bij zijn eten, denk ik.",
-  ],
-  joseBad: ["Nee nee nee, {n}, wat doet ge nu?", "Dat kost tijd, Karl. Veel tijd.", "Tja, da zijn nu eenmaal {dieren}, hé."],
-  joseGood: ["Ah, daar zit nog wat in de tank bij {n}!", "Kijk, {n} heeft er nog zin in!"],
-  anaPhoto: ["Een neuslengte, Karl. Een neuslengte! Ge moet da zien, da's koers op zijn schoonst."],
-  anaLong: ["{n} aan {odd}... Wie had dat gedacht? Ik niet, en ik ken er toch iets van."],
-  anaFav: ["Den favoriet heeft gedaan wat hij moest doen. {n} was gewoon de sterkste, punt."],
-  anaSmart: ["{n} heeft slim gekoerst: eerst in de wielen, en op het einde alles geven. Da's ne coureur, zenne."],
-  anaBest: ["{n} was vandaag de beste. Sterk begonnen, sterk geëindigd. Daar is niks op aan te merken."],
-  anaLast: ["En {l}... ach, morgen is er weer een dag."],
-  money: ["En thuis is er iemand een pak munten rijker. Proficiat!", "Thuis is het iets minder feest. Volgende race beter!", "Thuis precies quitte gespeeld. Ook goed!"],
+  intro: ["¡Buenas tardes y bienvenidos a Dierenrace TV! ¡Hoy, la {race}, una vuelta al óvalo!", "¡Bienvenidos de nuevo a Dierenrace TV! Seis {dieren} en la salida. ¿Qué nos deparará esto?", "¡Aquí estamos otra vez, queridos espectadores! ¡La {race} está a punto de empezar!"],
+  introJose: ["{fav} es el favorito de las casas de apuestas, a {odd}. Pero con estos animales nunca se sabe, Karl.", "Yo digo {fav}. Tiene piernas. Pero {out} a {oodd}, ojo con ese también.", "Vamos, tengo muchas ganas. {fav} es el favorito, pero he visto cosas más locas."],
+  start: ["¡Y arrancan! ¡Empieza la {race}!", "¡Ahí van! ¡Seis {dieren}, una vuelta, un ganador!", "¡Suena el disparo! ¡Y se van!"],
+  lead: ["¡{n} toma la delantera!", "¡{n} se pone en cabeza!", "¡Y ahora {n} va primero!", "¡{n} lo adelanta! ¡Qué carrera!"],
+  leadLate: ["¡{n} toma el mando en el tramo final!", "¡{n} se pone primero! ¡Increíble!", "¡{n} pasa en el último momento!"],
+  half: ["Mitad de carrera. {n} va delante, pero {m} va pegado a su rueda. Esto va a estar emocionante.", "Media vuelta. {n} hace el trabajo, {m} espera su momento. Muy listo."],
+  bend: ["¡Entran en la última curva! ¡{n} delante!", "¡La última curva! ¡{n} lidera, {m} se acerca!"],
+  final: ["¡Los últimos metros! ¿Puede alguien alcanzar a {n}?", "¡Ahí está la meta! {n}, {m}, ¿quién será?"],
+  win: ["¡GOOOOOL! ¡{n} gana la {race}!", "¡Y el ganador es {n}! ¡Fantástico!", "¡{n} gana! ¡Qué carrera, señoras y señores!"],
+  photo: ["¡Foto finish! ¡{n} gana por una nariz ante {m}!"],
+  podium: ["{m} es segundo, {k} se lleva el bronce."],
+  jose: ["Mira eso, {n} va a tope.", "Qué corredor es {n}, de verdad.", "Lo llevo diciendo todo el día: {n} tiene piernas hoy.", "Mira a {n}. Suelto, relajado. Da gusto verlo.",
+    "{n} va a rueda esperando su momento. Muy listo.", "Esto es carrera de verdad, Karl. Para esto lo hacemos.", "Madre mía, {n}, esto no es un paseo por el parque.", "Si empiezas así, {n}, tienes que aguantarlo, ¿eh?"],
+  joseBack: ["{n} corre con el freno de mano puesto.", "¡Vamos {n}, no te rindas, chaval!", "{n} tiene la cabeza en otra parte. En la comida, creo."],
+  joseBad: ["No no no, {n}, ¿qué haces?", "Eso cuesta tiempo, Karl. Mucho tiempo.", "Bueno, son {dieren}, ¿qué le vamos a hacer?"],
+  joseGood: ["¡Ah, a {n} todavía le queda gasolina!", "¡Mira, {n} todavía tiene ganas!"],
+  anaPhoto: ["Por una nariz, Karl. ¡Por una nariz! Mira eso, esto es carrera en estado puro."],
+  anaLong: ["{n} a {odd}... ¿Quién lo habría dicho? Yo no, y algo sé de esto."],
+  anaFav: ["El favorito ha hecho lo que tenía que hacer. {n} fue simplemente el más fuerte, punto."],
+  anaSmart: ["{n} ha corrido con cabeza: primero a rueda y al final, todo. Eso es un corredor."],
+  anaBest: ["{n} fue hoy el mejor. Empezó fuerte, terminó fuerte. Nada que objetar."],
+  anaLast: ["Y {l}... bueno, mañana será otro día."],
+  money: ["¡Y en casa alguien tiene un montón de monedas más! ¡Enhorabuena!", "En casa hay un poco menos de fiesta. ¡La próxima carrera, mejor!", "En casa, empate justo. ¡También está bien!"],
 };
+const RACE_ES = {schapen:"carrera de ovejas", kippen:"carrera de gallinas", slakken:"carrera de caracoles", varkens:"carrera de cerdos", eenden:"carrera de patos", schildpadden:"carrera de tortugas", koeien:"carrera de vacas"};
+const PLURAL_ES = {schapen:"ovejas", kippen:"gallinas", slakken:"caracoles", varkens:"cerdos", eenden:"patos", schildpadden:"tortugas", koeien:"vacas"};
 
 /* ---------------- Spelstatus ---------------- */
 let state = "bet";             // bet | intro | countdown | race | result
@@ -997,7 +978,7 @@ function startRace(opts){
   const R = RACES[field.type];
   let fav = 0, out = 0; odds.forEach((o,i)=>{ if(o.win<odds[fav].win) fav=i; if(o.win>odds[out].win) out=i; });
   race.favourite = fav;
-  const vars = {race:R.name, dieren:PLURAL[field.type], fav:nm(fav), odd:fmtOdd(odds[fav].win), out:nm(out), oodd:fmtOdd(odds[out].win)};
+  const vars = {race:RACE_ES[field.type], dieren:PLURAL_ES[field.type], fav:nm(fav), odd:fmtOdd(odds[fav].win), out:nm(out), oodd:fmtOdd(odds[out].win)};
   if(!opts.late){ sayT("karl", cpick(TXT.intro), vars, 2); sayT("jose", cpick(TXT.introJose), vars, 2); }
   requestAnimationFrame(loop);
 }
@@ -1020,7 +1001,7 @@ function rankNow(pos){
 }
 
 function commentate(prevT, t, pos){
-  const R = RACES[field.type], sim = race.sim, V = {race:R.name, dieren:PLURAL[field.type]};
+  const R = RACES[field.type], sim = race.sim, V = {race:RACE_ES[field.type], dieren:PLURAL_ES[field.type]};
   if(prevT < 0 && t >= 0) sayT("karl", cpick(TXT.start), V, 2);
   const rank = rankNow(pos), lead = rank[0], second = rank[1], best = pos[lead];
   while(race.evIdx < sim.events.length && sim.events[race.evIdx].t <= t){
@@ -1061,7 +1042,7 @@ function commentate(prevT, t, pos){
 }
 
 function joseAnalysis(){
-  const sim = race.sim, w = sim.order[0], last = sim.order[5], o = odds[w].win, V = {n:nm(w), odd:fmtOdd(o), l:nm(last), dieren:PLURAL[field.type]};
+  const sim = race.sim, w = sim.order[0], last = sim.order[5], o = odds[w].win, V = {n:nm(w), odd:fmtOdd(o), l:nm(last), dieren:PLURAL_ES[field.type]};
   let tpl;
   if(race.photo) tpl = TXT.anaPhoto[0];
   else if(o >= 10) tpl = TXT.anaLong[0];
@@ -1131,7 +1112,7 @@ function finishRace(){
   if(race.results.length){ net>0 ? setTimeout(SFX.win, 300) : (net<0 && setTimeout(SFX.lose, 300)); }
   const an = joseAnalysis(); Comm.say("jose", an.text, 2, an.spec);
   if(race.results.length){ const mi = net>0 ? 0 : net<0 ? 1 : 2;
-    Comm.say("karl", [`En thuis is er iemand ${fmt(net)} munten rijker. Proficiat!`, TXT.money[1], TXT.money[2]][mi], 1, [{tpl:TXT.money[mi], vars:{}}]); }
+    Comm.say("karl", [`¡Y en casa alguien tiene ${fmt(net)} monedas más! ¡Enhorabuena!`, TXT.money[1], TXT.money[2]][mi], 1, [{tpl:TXT.money[mi], vars:{}}]); }
   renderAll();
   $("saldo").textContent = fmt(S.saldo);
   drawTrack(frameAt(sim.dur), sim.dur + 3, 0);
@@ -2186,8 +2167,8 @@ $("btnSpeech").addEventListener("click", ()=>{
   S.speech = !S.speech; save(); renderHeader();
   Speech.unlocked = true; Voice.unlock();
   if(!S.speech){ Speech.cancel(); Voice.stop(); toast("Gesproken commentaar uit. Karl en José blijven in tekst."); }
-  else if(Voice.ok) toast("Gesproken commentaar aan (ingebouwde Vlaamse stemmen).");
-  else if(!Speech.supported || !Speech.ready) toast("Geen Nederlandse stem gevonden op dit toestel. Het commentaar blijft als tekst.");
+  else if(Voice.ok) toast("Gesproken commentaar aan (ingebouwde Spaanse stemmen).");
+  else if(!Speech.supported || !Speech.ready) toast("Geen Spaanse stem gevonden op dit toestel. Het commentaar blijft als tekst.");
   else toast(`Gesproken commentaar aan (${Speech.karl.lang}).`);
 });
 $("btnStats").addEventListener("click", showStats);
@@ -2201,7 +2182,7 @@ $("btnRestart").addEventListener("click", ()=>{ if(MP.on){ MP.rebuy(); $("brokeM
 window.addEventListener("resize", ()=>{ clearTimeout(resize._t); resize._t = setTimeout(resize, 80); });
 document.addEventListener("keydown", e=>{ if(document.querySelector(".lobby.show")) return; if(e.key==="Enter" && state==="bet" && !document.querySelector(".modal.show")) startRace(); else if(e.key==="Enter" && state==="result") nextRace(); });
 
-const VOICES_VER = "nl1";
+const VOICES_VER = "es1";
 /* =========================================================================
    Multiplayer (WebRTC via PeerJS). De host is de baas: hij kiest race + seed,
    iedereen speelt dezelfde deterministische race op hetzelfde (gesynchroniseerde) moment.
