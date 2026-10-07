@@ -2209,7 +2209,7 @@ const VOICES_VER = "nl1";
 const MP_INTRO = 7, MP_BET_SECS = 30, MP_MAX = 8, MP_APP = "dierenrace-kv26";
 const MP_LET = "ABCDEFGHJKLMNPQRSTUVWXYZ";
 const esc = s => String(s).replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const BROKERS = ["wss://broker.emqx.io:8084/mqtt", "wss://broker.hivemq.com:8884/mqtt", "wss://test.mosquitto.org:8081/mqtt"];
+const BROKERS = (new URLSearchParams(location.search).get("b") === "e") ? ["wss://broker.emqx.io:8084/mqtt", "wss://broker.hivemq.com:8884/mqtt", "wss://test.mosquitto.org:8081/mqtt"] : ["wss://broker.hivemq.com:8884/mqtt", "wss://broker.emqx.io:8084/mqtt", "wss://test.mosquitto.org:8081/mqtt"];
 const TP = "dierenrace-kv26/";
 const rid = () => Math.random().toString(36).slice(2, 10);
 function relayConnect(url, will){
@@ -2356,9 +2356,10 @@ const MP = {
     clearTimeout(this._bt);
     this._bt = setTimeout(()=>{
       const st = this.pub();
-      Object.values(this.conns).forEach(x=>{ try{ if(x.c.open) x.c.send({t:"state", st}); }catch(e){} });
+      const js = JSON.stringify(st);
+      Object.values(this.conns).forEach(x=>{ try{ if(x.c.open && (x.lastSt !== js || Date.now() - (x.lastStT||0) > 4000)){ x.lastSt = js; x.lastStT = Date.now(); x.c.send({t:"state", st}); } }catch(e){} });
       this.saveHost(); this.apply(st);
-    }, 30);
+    }, 120);
   },
   openBets(){
     const H = this.H; if(!this.isHost || (H.phase !== "lobby" && H.phase !== "result")) return;
